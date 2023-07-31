@@ -33,9 +33,7 @@
     </header>
     <main>
       <div class="video" id="home">
-        <div class="cycle-slideshow">
-          <img src="../images/projectBackgrounds/bunbuild_1.png" alt="Bunny Builder">
-        </div>
+        <img src="../images/projectBackgrounds/bunbuild_1.png" alt="Bunny Builder">
       </div>
       <div class="about_project">
         <div class="wrapper">
@@ -90,6 +88,13 @@
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="https://malsup.github.io/jquery.cycle2.js"></script>
+  <div class="loaderWrapper">
+    <span class="loaderBorder"><span class="loaderContent"></span></span>
+  </div>
+  <script>
+    $(window).on("load",function() {
+      $(".loaderWrapper").delay( 500 ).fadeOut("slow");
+    });
+  </script>
 </body>
 </html>

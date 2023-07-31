@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Owyn Lee | Game Design Portfolio</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -33,7 +34,7 @@
     </header>
     <main>
       <div class="video" id="home">
-        <video loop muted autoplay>
+        <video loop muted autoplay id="videoIntro">
           <source src="videos/MrPlagueRaces_Clip.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -224,5 +225,13 @@
       </div>
     </footer>
   </div>
+  <div class="loaderWrapper">
+    <span class="loaderBorder"><span class="loaderContent"></span></span>
+  </div>
+  <script>
+    $(window).on("load",function() {
+      $(".loaderWrapper").delay( 1500 ).fadeOut("slow");
+    });
+  </script>
 </body>
 </html>
