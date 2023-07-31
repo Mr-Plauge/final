@@ -19,7 +19,7 @@ header{
   width: 100%;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   top: 0em;
   z-index: 1000;
 }
@@ -63,12 +63,21 @@ div.wrapper{
   max-width: 1500px;
   margin: auto;
 }
+h1.displayNameSmall{
+  font-size: 0px;
+  width: 0%;
+  height: 0%;
+  text-align: center;
+}
 li.displayName{
   display: inline-block;
-  width: 120px;
+  width: 120%;
   line-height: 3em;
   text-align: left;
   flex: 8;
+}
+.displayName h1{
+  font-size: 2em;
 }
 .navOption, .navOption a{
   flex-grow: 0.25;
@@ -81,24 +90,12 @@ li.displayName{
   border-radius: 10px;
   border: 1px solid rgb(91, 91, 95, 0);
 }
-.navOption:nth-of-type(2) a:hover {
-  border: 1px solid rgb(88, 174, 255);
-}
-.navOption:nth-of-type(3) a:hover {
-  border: 1px solid rgb(88, 174, 255);
-}
-.navOption:nth-of-type(4) a:hover {
-  border: 1px solid rgb(88, 174, 255);
-}
-.navOption:nth-of-type(5) a:hover {
+.navOption a:hover {
   border: 1px solid rgb(88, 174, 255);
 }
 .navOption:hover{
   flex-grow: 1;
   -webkit-flex-grow: 1;
-}
-.displayName h1{
-  font-size: 2em;
 }
 div.video{
   width: 100%;
@@ -120,10 +117,19 @@ div.video{
   object-fit: contain;
   overflow: clip;
 }
-.video img{
+div.projectDisplay{
+  width: 100%;
+  padding: 0;
+  margin-bottom: -1%;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  overflow: hidden;
+  display: block;
+}
+.projectDisplay img{
   width: 100%;
   height: 30em;
-  z-index: -1;
+  z-index: -10;
   pointer-events: none;
   vertical-align: baseline;
   object-fit: cover;
@@ -384,5 +390,142 @@ div.contactList{
   95% {
     transform: scale(100%);
     background-color: rgb(91, 91, 95);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.projectList{
+    width:  80%;
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div.contactList{
+    width:  80%;
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  h1.displayNameSmall{
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  li.displayName{
+    display: inline;
+    font-size: 0px;
+    padding: 0px;
+    width: 0%;
+    line-height: 0em;
+    text-align: left;
+    flex: 0;
+  }
+  .navOption, .navOption a{
+    flex-grow: 0.25;
+    -webkit-flex-grow: 0.25;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+    border: 1px solid rgb(91, 91, 95, 0);
+    padding:0.5em;
+  }
+  div.video{
+    width: 200%;
+    padding: 0;
+    margin-bottom: -1%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    display: block;
+  }
+  .video video{
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: -15%;
+    margin-left: -50%;
+    z-index: -1;
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: baseline;
+    object-fit: contain;
+    overflow: clip;
+  }
+  div.projectDisplay{
+    width: 100%;
+    padding: 0;
+    margin-bottom: -1%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    display: block;
+  }
+  .projectDisplay img{
+    max-width: 100%;
+    height: 30em;
+    z-index: -10;
+    pointer-events: none;
+    vertical-align: baseline;
+    object-fit: cover;
+    overflow: clip;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  div.projectList{
+    width:  80%;
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.contactList{
+    width:  80%;
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .navOption, .navOption a{
+    flex-grow: 0.25;
+    -webkit-flex-grow: 0.25;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+    border: 1px solid rgb(91, 91, 95, 0);
+    padding:0.2em;
+  }
+  div.video{
+    width: 400%;
+    padding: 0;
+    margin-bottom: -1%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    display: block;
+  }
+  .video video{
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: -15%;
+    margin-left: -75%;
+    z-index: -1;
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: baseline;
+    object-fit: contain;
+    overflow: clip;
   }
 }
