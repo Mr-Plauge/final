@@ -531,11 +531,11 @@ div.contactList{
     display: block;
   }
   .video video{
-    width: 200%;
-    height: 200%;
-    margin-top: -10%;
-    margin-bottom: -15%;
-    margin-left: -50%;
+    width: 300%;
+    height: 300%;
+    margin-top: -60%;
+    margin-bottom: -50%;
+    margin-left: -100%;
     z-index: -1;
     pointer-events: none;
     display: inline-block;
