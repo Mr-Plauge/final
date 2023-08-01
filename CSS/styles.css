@@ -69,6 +69,12 @@ h1.displayNameSmall{
   height: 0%;
   text-align: center;
 }
+h1.displayNameSmaller{
+  font-size: 0px;
+  width: 0%;
+  height: 0%;
+  text-align: center;
+}
 li.displayName{
   display: inline-block;
   width: 120%;
@@ -416,6 +422,12 @@ div.contactList{
     height: 100%;
     text-align: center;
   }
+  h1.displayNameSmaller{
+    font-size: 0px;
+    width: 0%;
+    height: 0%;
+    text-align: center;
+  }
   li.displayName{
     display: inline;
     font-size: 0px;
@@ -527,5 +539,17 @@ div.contactList{
     vertical-align: baseline;
     object-fit: contain;
     overflow: clip;
+  }
+  h1.displayNameSmaller{
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  h1.displayNameSmall{
+    font-size: 0px;
+    width: 0%;
+    height: 0%;
+    text-align: center;
   }
 }
