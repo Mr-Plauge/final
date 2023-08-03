@@ -237,9 +237,29 @@ div.project{
   margin: auto;
   background-color: rgb(29, 23, 27);
 }
+div.projectContent{
+  width: 100%;
+  padding: 1em;
+  margin: auto;
+}
 .project h1{
   font-size: 2em;
   padding-bottom: 0.2em;
+}
+.projectContent h1{
+  font-size: 2em;
+  padding-bottom: 0.2em;
+}
+.projectContent video{
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  pointer-events: none;
+}
+.projectContent img{
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 div.projectImage:hover{
   transform: scale(1.05);
@@ -399,7 +419,7 @@ div.contactList{
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   div.projectList{
     width:  80%;
     max-width: 1500px;
@@ -491,7 +511,7 @@ div.contactList{
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   div.projectList{
     width:  80%;
     max-width: 1500px;
