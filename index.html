@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owyn Lee | Game Design Portfolio</title>
+  <title>Owyn Lee | Homepage</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <link rel="stylesheet" href="CSS/styles.css">
 </head>
@@ -11,12 +11,12 @@
   <div class="container">
     <header>
       <div class="wrapper">
-        <h1 class="displayNameSmall">Owyn Lee's Game Design Portfolio</h1>
+        <h1 class="displayNameSmall">Owyn Lee | Technical Artist</h1>
         <h1 class="displayNameSmaller">Owyn Lee</h1>
         <nav>
           <ul>
             <li class="displayName">
-              <h1>Owyn Lee's Game Design Portfolio</h1>
+              <h1>Owyn Lee | Technical Artist</h1>
             </li>
             <li class="navOption">
               <a href = "index.html#home">home</a>
@@ -37,15 +37,13 @@
     <main>
       <div class="video" id="home">
         <video loop muted autoplay id="videoIntro">
-          <source src="videos/mrplagueraces_1.mp4" type="video/mp4">
+          <source src="videos/demo_reel.mp4" type="video/mp4">
         </video>
       </div>
       <div class="about" id="about">
         <div class="wrapper">
           <h1>About Me</h1>
-          <p>Hello! I am Owyn Lee, an aspiring game designer from California.
-          I have been designing assets and programming for games since I was 11. I published my first mod, MrPlague's Authentic Races, at the age of 13.
-          This portfolio contains an overview of my projects, the design process behind each of them, and a showcase of the assets made for them.</p>
+          <p>Hello! I am Owyn Lee, an aspiring technical artist. I have been self-learning programming and digital art since 2018. My hobbies include modding games, deconstructing rigs and shaders, and collaborating with others to fulfill creative visions. My portfolio includes the projects I have developed, as well as an overview of my contributions to the modding community.</p>
         </div>
       </div>
     </main>
@@ -53,35 +51,33 @@
       <div class="project" id="projects">
         <div class="wrapper">
           <h1>Featured Projects</h1>
-          <p class="descriptor">Collaborative works, finished products, and refined projects.</p>
+          <p class="descriptor">Longterm projects and studies.</p>
         </div>
       </div>
       <div class="projectList">
         <div class="projectModule">
-          <a href = "projects/project_bunbuild.html">
-            <div class = "projectImage" style="background-image: url('images/projectIcons/BunBuild_Icon.png')">
-              <h1 class= "projectName">Bunny Builder</h1>
+          <a href = "projects/project_uvnrig.html">
+            <div class = "projectImage" style="background-image: url('images/projectIcons/UvnRig_Icon.png')">
+              <h1 class= "projectName">UVN Facial Rig</h1>
             </div>
           </a>
           <div class="qualities">
-            <p class="modding">gamedev</p>
-            <p class="unity">unity</p>
-            <p class="csharp">c#</p>
+            <p class="maya">maya</p>
+            <p class="bifrost">bifrost</p>
           </div>
-          <p class= "projectDescription">A short mazebuilding horror game. Features a mazebuilding interface and shotgun combat. Released on simmer.io.</p>
+          <p class= "projectDescription">A Bifrost compound that wraps a flattened mesh onto an object's UV surface. Based on rigging techniques used in Blue Sky Studios' Peanuts Movie.</p>
         </div>
         <div class="projectModule">
-          <a href = "projects/project_rampgame.html">
-            <div class = "projectImage" style="background-image: url('images/projectIcons/RampGame_Icon.png')">
-              <h1 class= "projectName">Ramp Game</h1>
+          <a href = "projects/project_pixelshader.html">
+            <div class = "projectImage" style="background-image: url('images/projectIcons/PixelShader_Icon.png')">
+              <h1 class= "projectName">Unity Pixel Shader</h1>
             </div>
           </a>
           <div class="qualities">
-            <p class="modding">gamedev</p>
             <p class="unity">unity</p>
             <p class="csharp">c#</p>
           </div>
-          <p class= "projectDescription">A short platformer that uses a third person perspective. Features environment design and simple AI. Released on simmer.io.</p>
+          <p class= "projectDescription">A screenspace unity shader that forms pixel-perfect outlines on objects. Inspired by Tessel8r's shader experiments.</p>
         </div>
         <div class="projectModule">
           <a href = "projects/project_mrplagueraces.html">
@@ -99,7 +95,7 @@
       <div class="project">
         <div class="wrapper">
           <h1>Personal Projects</h1>
-          <p class="descriptor">Experimental projects, snippets, and assets.</p>
+          <p class="descriptor">Experiments, snippets, and assets.</p>
         </div>
       </div>
       <div class="projectList">
@@ -164,22 +160,76 @@
           <p class= "projectDescription">Entity possession for minecraft multiplayer. Made with the minecraft datapack system.</p>
         </div>
         <div class="projectModule">
-          <a href = "projects/project_pixelshader.html">
-            <div class = "projectImage" style="background-image: url('images/projectIcons/PixelShader_Icon.png')">
-              <h1 class= "projectName">Unity Pixel Shader</h1>
+          <a href = "projects/project_bunbuild.html">
+            <div class = "projectImage" style="background-image: url('images/projectIcons/BunBuild_Icon.png')">
+              <h1 class= "projectName">Bunny Builder</h1>
             </div>
           </a>
           <div class="qualities">
+            <p class="modding">gamedev</p>
             <p class="unity">unity</p>
             <p class="csharp">c#</p>
           </div>
-          <p class= "projectDescription">A screenspace unity shader that forms pixel-perfect outlines on objects. Inspired by Tessel8r.</p>
+          <p class= "projectDescription">A short mazebuilding horror game. Features a mazebuilding interface and shotgun combat. Released on simmer.io.</p>
+        </div>
+        <div class="projectModule">
+          <a href = "projects/project_rampgame.html">
+            <div class = "projectImage" style="background-image: url('images/projectIcons/RampGame_Icon.png')">
+              <h1 class= "projectName">Ramp Game</h1>
+            </div>
+          </a>
+          <div class="qualities">
+            <p class="modding">gamedev</p>
+            <p class="unity">unity</p>
+            <p class="csharp">c#</p>
+          </div>
+          <p class= "projectDescription">A short platformer that uses a third person perspective. Features environment design and simple AI. Released on simmer.io.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="wrapper">
+          <h1>Collaborations</h1>
+          <p class="descriptor">My contributions to other projects.</p>
+        </div>
+      </div>
+      <div class="collaborationList">
+        <div class="projectModule">
+          <a href = "https://www.oresfall.com/">
+            <div class = "projectImage" style="background-image: url('images/collaborationIcons/Oresfall_Icon.png')">
+              <h1 class= "projectName">Oresfall</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Programmed content for multiplayer server.</p>
+        </div>
+        <div class="projectModule">
+          <a href = "https://www.planetminecraft.com/server/origin-anarchy-origins-mod/">
+            <div class = "projectImage" style="background-image: url('images/collaborationIcons/AncientOrigins_Icon.png')">
+              <h1 class= "projectName">Ancient Origins</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Programmed and sprited content for multiplayer server.</p>
+        </div>
+        <div class="projectModule">
+          <a href = "https://forums.terraria.org/index.php?threads/cancled-tides-of-aether.82495/">
+            <div class = "projectImage" style="background-image: url('images/collaborationIcons/TidesOfAether_Icon.png')">
+              <h1 class= "projectName">Tides of Aether</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Sheeted player armor.</p>
+        </div>
+        <div class="projectModule">
+          <a href = "https://forums.terraria.org/index.php?threads/calamitys-vanities.97575/">
+            <div class = "projectImage" style="background-image: url('images/collaborationIcons/CalamityVanities_Icon.png')">
+              <h1 class= "projectName">Calamity's Vanities</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Sheeted player armor.</p>
         </div>
       </div>
       <div class="contact" id="contact">
         <div class="wrapper">
           <h1>Contact Me</h1>
-          <p class="descriptor">I frequently check my profiles for inquiries!</p>
+          <p class="descriptor">I regularly check my profiles for inquiries!</p>
         </div>
       </div>
       <div class="contactList">
@@ -222,7 +272,7 @@
     </aside>
     <footer>
       <div class="wrapper">
-        Copyright © 2023 by Owyn Lee. All icons used with permission.
+        Copyright © 2024 by Owyn Lee.
       </div>
     </footer>
   </div>

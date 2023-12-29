@@ -10,12 +10,12 @@
   <div class="container">
     <header>
       <div class="wrapper">
-        <h1 class="displayNameSmall">Owyn Lee's Game Design Portfolio</h1>
+        <h1 class="displayNameSmall">Owyn Lee | Technical Artist</h1>
         <h1 class="displayNameSmaller">Owyn Lee</h1>
         <nav>
           <ul>
             <li class="displayName">
-              <h1>Owyn Lee's Game Design Portfolio</h1>
+              <h1>Owyn Lee | Technical Artist</h1>
             </li>
             <li class="navOption">
               <a href = "../index.html#home">home</a>
@@ -45,7 +45,7 @@
               <td>
                 <strong>Project Status</strong>
               </td>
-              <td>Ongoing</td>
+              <td>Concluded</td>
             </tr>
             <tr>
               <td>
@@ -69,33 +69,94 @@
               <td>
                 <strong>Project Role(s)</strong>
               </td>
-              <td>Lead Developer</td>
+              <td>Sole Developer</td>
             </tr>
           </table>
         </div>
       </div>
     </main>
     <aside>
-      <div class="project">
-        <div class="wrapper">
-          <h1>About Project</h1>
-          <p class="descriptor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      
       <div class="projectContent">
         <div class="wrapper">
-          <h1>Project Development</h1>
-          <p class="descriptor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1>Overview</h1>
+          <p class="descriptor">My objective for this project was to study how HLSL shaders and post processing effects worked in Unity's universal render pipeline. To provide myself with a direction, I aimed to deconstruct/reconstruct the 2D pixel art aesthetic in Unity's 3D engine.</p>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h2>Project Goals</h2>
+          <ul>
+            <li>
+              <p>Create procedural pixel art outlines for a 3D scene</p>
+            </li>
+            <li>
+              <p>Develop familiarity with HLSL programming</p>
+            </li>
+            <li>
+              <p>Develop familiarity with creating screenspace shaders</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Pixel Perfect Outlines</h1>
+          <p class="descriptor">In pixel art, single-pixel outlines are used to define the edges of shapes. The blockiness of the lines are responsible for giving pixel art its iconic "chunky" look. To best replicate these lines, I developed a screenspace shader to mark the edge pixels of 3D objects in the unity scene. The screen's resolution is downscaled prior to drawing the outlines, completing the pixelated effect.</p>
           <video loop muted autoplay id="videoIntro">
-            <source src="../videos/pixelshader_1.mp4" type="video/mp4">
+            <source src="../videos/portfolio_pixelshader_2.mp4" type="video/mp4">
           </video>
+          <p class="descriptor">I used sobel operations to detect extreme changes in the camera's depth and normal buffers, providing the shader with a map of where edges are located. Depth is used to mark the outer edges of objects, while normals are used to mark the inner edges.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_pixelshader_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Further Reading</h1>
+          <p class="descriptor">Resources used during project development.</p>
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=ij555s4mAuI">Isometric Camera</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=-WHW48SlvsI">Three.js Pixel Shader Update</a>
+            </li>
+            <li>
+              <a href="https://imgur.com/gallery/qwhbHQq">Creating a Pixel Art Scene in Realtime 3D</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=Z8xB7i3W4CE">Pixel Art Shader In Unity</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=-8xlPP4qgVo">Pixelated Rendering in URP</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=LMqio9NsqmM">Outlines - Devlog 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="project">
+        <div class="wrapper">
+          <h1>External Links</h1>
+          <p class="descriptor">Offsite links for more project information.</p>
+        </div>
+      </div>
+      <div class="collaborationList">
+        <div class="projectModule">
+          <a href = "https://github.com/Mr-Plauge/Unity-Pixel-Shader">
+            <div class = "projectImage" style="background-image: url('../images/externalIcons/Github_Icon.png')">
+              <h1 class= "projectName">Github Repository</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Code repository of the project.</p>
         </div>
       </div>
     </aside>
     <footer>
       <div class="wrapper">
-        Copyright © 2023 by Owyn Lee. All icons used with permission.
+        Copyright © 2024 by Owyn Lee.
       </div>
     </footer>
   </div>
