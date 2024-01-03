@@ -51,7 +51,7 @@
               <td>
                 <strong>Project Duration</strong>
               </td>
-              <td>1 Year</td>
+              <td>3 months</td>
             </tr>
             <tr>
               <td>
@@ -78,11 +78,84 @@
     <aside>
       <div class="projectContent">
         <div class="wrapper">
-          <h1>Gameplay</h1>
-          <p class="descriptor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <img src="../gifs/warper_sight.gif" alt="Warper: Interdimensional Sight">
-          <p class="descriptor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <img src="../gifs/warper_network.gif" alt="Warper: Warp Network">
+          <h1>Overview</h1>
+          <p class="descriptor">When redesigning this origin, I was faced with the objective of creating a visual interface for teleporting between minecraft's dimensions. Interdimensional travel was hazardous on the server this mod was developed for, necessitating the creation of a unique form of crossthrough vision.</p>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h2>Project Goals</h2>
+          <ul>
+            <li>
+              <p>Create a user-friendly method of seeing between dimensions before teleporting</p>
+            </li>
+            <li>
+              <p>Optimize performance and use packet communication for a multiplayer environment</p>
+            </li>
+            <li>
+              <p>Become familiar with Minecraft's Fabric API</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>The Teleportation Problem</h1>
+          <p class="descriptor">Prior to my rework of the mod, Warper was unable to see through dimensions before teleporting. Players would often be teleported blindly into hazardous terrain, disincentivizing them from using the ability. In addition, Warpers were restricted to teleporting to their exact coordinates between dimensions. Due to terrain differences between dimensions, this would often leave them in the middle of open air or trapped inside of solid ground.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_warper_1.mp4" type="video/mp4">
+          </video>
+          <p class="descriptor">To counterract these problems, I re-engineered a clientside freecam mod to display a hologram of terrain in other dimensions. Upon entering freecam, players were displayed with a visual preview of their surroundings in the destination dimension. Moving inside of the freecam allowed players to control where they teleported, giving them the ability to select a safe landing point before teleporting. Clientside particles were used to form the hologram.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_warper_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>1-8 Coordinate Scaling</h1>
+          <p class="descriptor">The Nether presented an interesting challenge due to its 1-8 coordinate ratio with the End and Overworld. To maintain the ratio, I scaled the freecam's initial starting coordinates by 8x depending on whether the player was teleporting to or from the Nether.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_warper_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Further Reading</h1>
+          <p class="descriptor">Resources used during project development.</p>
+          <ul>
+            <li>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/free-cam">Hashalite's Fabric Freecam Mod</a>
+            </li>
+            <li>
+              <a href="https://www.reddit.com/r/Minecraft/comments/k8j16s/3d_hologram_using_colored_particles/">3D Hologram using Colored Particles in Minecraft</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="project">
+        <div class="wrapper">
+          <h1>External Links</h1>
+          <p class="descriptor">Offsite links for more project information.</p>
+        </div>
+      </div>
+      <div class="collaborationList">
+        <div class="projectModule">
+          <a href = "https://github.com/Mr-Plauge/Warper">
+            <div class = "projectImage" style="background-image: url('../images/externalIcons/Github_Icon.png')">
+              <h1 class= "projectName">Github Repository</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Code repository of the project.</p>
+        </div>
+        <div class="projectModule">
+          <a href = "https://www.youtube.com/watch?v=9Pamy4OkpQ4&list=PLk0XlDnWsmp9CbrfPA-SMVQSIHynkytLj">
+            <div class = "projectImage" style="background-image: url('../images/externalIcons/Reviews_Warper_Icon.png')">
+              <h1 class= "projectName">Project Reviews</h1>
+            </div>
+          </a>
+          <p class= "collaborationDescription">Online coverage of the project.</p>
         </div>
       </div>
     </aside>

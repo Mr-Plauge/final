@@ -100,14 +100,28 @@
       </div>
       <div class="projectContent">
         <div class="wrapper">
-          <h1>UV Surface Projection</h1>
-          <p class="descriptor">Placeholder text.</p>
+          <h1>UV Position Sampling</h1>
+          <p class="descriptor">Instead of working with a traditional face rig, UVN rigging wraps a flattened "face" mesh onto a “skull” object. To best replicate this effect, I queried surface positions from the skull's UV map. The flattened face mesh handles coordinates similarly to the UV map, and can use the sampled positions as a guide for wrapping onto the skull's surface.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_uvnrig_1.mp4" type="video/mp4">
+          </video>
+          <p class="descriptor">The face mesh can be manipulated without affecting the skull’s shape, allowing the character’s head to retain its profile independently of the character’s expression.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_uvnrig_2.mp4" type="video/mp4">
+          </video>
+          <p class="descriptor">If the skull is altered, the face mesh will readjust to its new shape.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_uvnrig_3.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
       <div class="projectContent">
         <div class="wrapper">
-          <h1>Normal Extrusion</h1>
-          <p class="descriptor">Placeholder text.</p>
+          <h1>Normal Offset</h1>
+          <p class="descriptor">To facilitate depth on the surface of the face mesh, I multiplied the wrapper's vertex Z axis positions by the skull's normals. Inward/outward deviations on the flattened face mesh are automatically extruded from the skull's surface when the face is wrapped.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_uvnrig_4.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
       <div class="projectContent">

@@ -78,11 +78,92 @@
     <aside>
       <div class="projectContent">
         <div class="wrapper">
-          <h1>Gameplay</h1>
-          <p class="descriptor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1>Overview</h1>
+          <p class="descriptor">This project was my first major undertaking as a programmer and spriter. My objective was to create a fully fledged race system for Terraria, taking inspiration from a similar feature in Starbound. I was responsible for spriting and animating races, designing UI, and creating additional assets used in the mod.</p>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h2>Project Goals</h2>
+          <ul>
+            <li>
+              <p>Override the player's appearance using Tmodloader's PlayerDrawLayer system</p>
+            </li>
+            <li>
+              <p>Allow players to select custom races from a window in the player creation menu</p>
+            </li>
+            <li>
+              <p>Facilitate community race creation via a modular race index and UI</p>
+            </li>
+            <li>
+              <p>Create a seamless experience with the base game by matching artstyle and interface</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Custom Playerlayers</h1>
+          <p class="descriptor">To override the player's appearance, I used Tmodloader's PlayerDrawLayer system. Each of the players' sprite sheets are replaced with custom ones that change appearance based on the player's internal race ID. Certain races have additional playerlayers for special features, such as horns or separately colored underbellies.</p>
           <video loop muted autoplay id="videoIntro">
-            <source src="../videos/mrplagueraces_1.mp4" type="video/mp4">
+            <source src="../videos/portfolio_mrplagueraces_3.mp4" type="video/mp4">
           </video>
+          <p class="descriptor">Each racial sheet is internally sprited in grayscale, allowing the player to customize their character's palette ingame. To hueshift the racial sheets when color is applied, I used blue colors for darker tones when spriting.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Race Selection UI</h1>
+          <p class="descriptor">When designing the UI for selecting races, my primary goal was making sure it felt natural alongside the rest of Terraria's player creation interface. The final version of the UI is directly integrated into the player creation menu as an additional tab, making it appear seamless within the vanilla game.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_1.mp4" type="video/mp4">
+          </video>
+          <p class="descriptor">Players can select races using a scrolling list that automatically fills itself using the mod's internal list of loaded races. Each race is displayed in the UI using Terraria's UIPlayer, a class that draws and animates a fake player.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Community Race Creation</h1>
+          <p class="descriptor">Other modders can create their own races by using a child of the mod's public race class, a system programmed by Mirsario. Addon races are detected and appended to the mod's internal list of races, automatically adding them to the race selection UI.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_5.mp4" type="video/mp4">
+          </video>
+          <p class="descriptor">To provide new modders with an easy starting point for constructing addon mods, I developed an ingame interface for generating a mod skeleton. The generated skeleton contains a racial playerlayer directory and a race class, providing artists with the necessary groundwork for creating, designing and publishing a custom race.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Racial Abilities</h1>
+          <p class="descriptor">Each race is given custom abilities to provide unique experiences for the player. Certain abilities are recolored using the player's color customization values, providing visual cohesion and additional interactivity to each race. I was responsible for designing the visual effects and assets used in each racial ability.</p>
+          <video loop muted autoplay id="videoIntro">
+            <source src="../videos/portfolio_mrplagueraces_7.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="projectContent">
+        <div class="wrapper">
+          <h1>Further Reading</h1>
+          <p class="descriptor">Resources used during project development.</p>
+          <ul>
+            <li>
+              <a href="https://starbounder.org/Races">Starbound Race System</a>
+            </li>
+            <li>
+              <a href="https://forums.terraria.org/index.php?threads/n-terraria-mod-rpg-races-classes-quests-and-other-things.542/">N Terraria Mod: RPG, Races, Classes, Quests</a>
+            </li>
+            <li>
+              <a href="https://docs.tmodloader.net/docs/stable/annotated.html">Tmodloader Documentation</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="project">
@@ -102,7 +183,7 @@
         </div>
         <div class="projectModule">
           <a href = "https://www.youtube.com/watch?v=ORbIz_OK1H0&list=PLk0XlDnWsmp9ekpSnX5LoXli5wNWk9Wj7">
-            <div class = "projectImage" style="background-image: url('../images/externalIcons/Reviews_Icon.png')">
+            <div class = "projectImage" style="background-image: url('../images/externalIcons/Reviews_MrPlagueRaces_Icon.png')">
               <h1 class= "projectName">Project Reviews</h1>
             </div>
           </a>
