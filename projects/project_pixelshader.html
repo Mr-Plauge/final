@@ -51,13 +51,13 @@
               <td>
                 <strong>Project Duration</strong>
               </td>
-              <td>6 Months</td>
+              <td>1 Year</td>
             </tr>
             <tr>
               <td>
                 <strong>Software Used</strong>
               </td>
-              <td>Visual Studio, Unity</td>
+              <td>Visual Studio, Unity, Shader Graph Nodes</td>
             </tr>
             <tr>
               <td>
@@ -76,83 +76,128 @@
       </div>
     </main>
     <aside>
-      <div class="projectContent">
-        <div class="wrapper">
-          <h1>Overview</h1>
-          <p class="descriptor">My objective for this project was to study how HLSL shaders and post processing effects worked in Unity's universal render pipeline. To provide myself with a direction, I aimed to deconstruct/reconstruct the 2D pixel art aesthetic in Unity's 3D engine.</p>
-        </div>
-      </div>
-      <div class="projectContent">
-        <div class="wrapper">
-          <h2>Project Goals</h2>
-          <ul>
-            <li>
-              <p>Create procedural pixel art outlines for a 3D scene</p>
-            </li>
-            <li>
-              <p>Develop familiarity with HLSL programming</p>
-            </li>
-            <li>
-              <p>Develop familiarity with creating screenspace shaders</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="projectContent">
-        <div class="wrapper">
-          <h1>Pixel Perfect Outlines</h1>
-          <p class="descriptor">In pixel art, single-pixel outlines are used to define the edges of shapes. The blocky appearance of the lines is responsible for giving pixel art its iconic "chunky" look. To best replicate these lines, I developed a screenspace shader to mark the edge pixels of 3D objects in the unity scene. The screen's resolution is downscaled prior to drawing the outlines, completing the pixelated effect.</p>
-          <video loop muted autoplay id="videoIntro">
-            <source src="../videos/portfolio_pixelshader_1.mp4" type="video/mp4">
-          </video>
-          <p class="descriptor">I used sobel operations to detect extreme changes in the camera's depth and normal buffers, providing the shader with a map of where edges are located. Depth is used to mark the outer edges of objects, while normals are used to mark the inner edges.</p>
-          <video loop muted autoplay id="videoIntro">
-            <source src="../videos/portfolio_pixelshader_2.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="projectContent">
-        <div class="wrapper">
-          <h1>Further Reading</h1>
-          <p class="descriptor">Resources used during project development.</p>
-          <ul>
-            <li>
-              <a href="https://www.youtube.com/watch?v=ij555s4mAuI">Isometric Camera</a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/watch?v=-WHW48SlvsI">Three.js Pixel Shader Update</a>
-            </li>
-            <li>
-              <a href="https://imgur.com/gallery/qwhbHQq">Creating a Pixel Art Scene in Realtime 3D</a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/watch?v=Z8xB7i3W4CE">Pixel Art Shader In Unity</a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/watch?v=-8xlPP4qgVo">Pixelated Rendering in URP</a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/watch?v=LMqio9NsqmM">Outlines - Devlog 2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="project">
-        <div class="wrapper">
-          <h1>External Links</h1>
-          <p class="descriptor">Offsite links for more project information.</p>
-        </div>
-      </div>
-      <div class="collaborationList">
-        <div class="projectModule">
-          <a href = "https://github.com/Mr-Plauge/Unity-Pixel-Shader">
-            <div class = "projectImage" style="background-image: url('../images/externalIcons/Github_Icon.png')">
-              <h1 class= "projectName">Github Repository</h1>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>Overview</h1>
+                <p class="descriptor">My objective for this project was to study how HLSL shaders and post processing effects worked in Unity's universal render pipeline. To provide myself with a direction, I aimed to deconstruct/reconstruct the 2D pixel art aesthetic in Unity's 3D engine.</p>
             </div>
-          </a>
-          <p class= "collaborationDescription">Code repository of the project.</p>
         </div>
-      </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h2>Project Goals</h2>
+                <ul>
+                    <li>
+                        <p>Create procedural pixel art outlines for a 3D scene</p>
+                    </li>
+                    <li>
+                        <p>Develop familiarity with HLSL programming</p>
+                    </li>
+                    <li>
+                        <p>Develop familiarity with creating screenspace shaders</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>Pixel Perfect Outlines</h1>
+                <p class="descriptor">In pixel art, single-pixel outlines are used to define the edges of shapes. The blocky appearance of the lines is responsible for giving pixel art its iconic "chunky" look. To best replicate these lines, I developed a screenspace shader (initially written in HLSL, later ported to URP's Shader Graph for developmental flexibility) to mark the edge pixels of 3D objects in the unity scene. The screen's resolution is downscaled prior to drawing the outlines, completing the pixelated effect.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_1.mp4" type="video/mp4">
+                </video>
+                <p class="descriptor">I used sobel operations to detect extreme changes in the camera's depth and normal buffers, providing the shader with a map of where edges are located. Depth is used to mark the outer edges of objects, while normals are used to mark the inner edges.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>Water Shader and Custom Reflection Probe</h1>
+                <p class="descriptor">To produce the illusion of realtime water reflections, a second camera below the surface of the water uses trigonometry to perfectly mirror the rotation and position of the main camera. To prevent the reflection probe from rendering geometry above the surface of the water, I culled the secondary camera's frustums by the water plane.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_5.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>Pixel Perfect Camera</h1>
+                <p class="descriptor">To prevent the moving camera from sampling the world at uneven points and producing a jittering discontinuity, I locked its position to a grid of pixel-sized units (based on the camera's resolution). The grid is multiplied by the camera's yaw and pitch to ensure it correctly moves the camera along pixel-sized increments from any angle.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_6.mp4" type="video/mp4">
+                </video>
+                <p class="descriptor">To negate the blocky repositioning produced by the grid's pixel-sized units, the positional offset imparted by the grid is subtracted from the final position of the camera using a plane-based camera rig. The end result preserves the grid's pixel perfect sampling without compromising the smooth glide of the camera.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>AOV Creation Tool</h1>
+                <p class="descriptor">The screenspace nature of the shader prevents it from accessing scene data by default, necessitating the development of a custom buffer system to write additional AOVs (arbitrary output variables) for the shader to read and use. Custom AOVs play an integral role in layer masking and reading object information.</p>
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_8.mp4" type="video/mp4">
+                </video>
+                <p class="descriptor">To create custom AOVs, I developed the "Generate Buffer" rendering pass. The pass renders objects from a specified layer to an RTHandle. The handle is sent to the shader as a screenspace texture, where the per-pixel data it contains can be accessed by sampling texture coordinates. An override shader can be applied to objects rendered to the RTHandle, allowing for the insertion of AOV data.</p>
+
+                <video loop muted autoplay id="videoIntro">
+                    <source src="../videos/portfolio_pixelshader_9.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="projectContent">
+            <div class="wrapper">
+                <h1>Further Reading</h1>
+                <p class="descriptor">Resources used during project development.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=ij555s4mAuI">Isometric Camera</a>
+                    </li>
+                    <li>
+                        <a href="https://www.reddit.com/r/gamedev/comments/17d7fec/how_to_achieve_the_3d_pixel_art_look/">Achieving Smooth Pixelation</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=w84-l3IEhXM">Planar Reflections for Unity's Built-In Render Pipeline</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=-WHW48SlvsI">Three.js Pixel Shader Update</a>
+                    </li>
+                    <li>
+                        <a href="https://imgur.com/gallery/qwhbHQq">Creating a Pixel Art Scene in Realtime 3D</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=Z8xB7i3W4CE">Pixel Art Shader In Unity</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=-8xlPP4qgVo">Pixelated Rendering in URP</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=VGEz8oKyMpY">Outline Post Process in Unity Shader Graph</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=LMqio9NsqmM">Outlines - Devlog 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project">
+            <div class="wrapper">
+                <h1>External Links</h1>
+                <p class="descriptor">Offsite links for more project information.</p>
+            </div>
+        </div>
+        <div class="collaborationList">
+            <div class="projectModule">
+                <a href="https://github.com/Mr-Plauge/Unity-Pixel-Shader">
+                    <div class="projectImage" style="background-image: url('../images/externalIcons/Github_Icon.png')">
+                        <h1 class="projectName">Github Repository</h1>
+                    </div>
+                </a>
+                <p class="collaborationDescription">Code repository of the project.</p>
+            </div>
+        </div>
     </aside>
     <footer>
       <div class="wrapper">
