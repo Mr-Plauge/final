@@ -79,7 +79,7 @@
         <div class="projectContent">
             <div class="wrapper">
                 <h1>Overview</h1>
-                <p class="descriptor">My objective for this project was to replicate the arboreal movement of primates as a player movement system. To capture the swinging motions necessary for this project, I developed a physics-based arm tether system built on swiping the mouse back and forth to build momentum.</p>
+                <p class="descriptor">My objective for this project was to replicate the arboreal locomotion of gibbons as a player movement system. To capture the swinging gameplay fantasy promised by this form of movement, I developed a mouse-only player controller built solely on the mouse's ability to be swept back and forth.</p>
             </div>
         </div>
         <div class="projectContent">
@@ -87,13 +87,13 @@
                 <h2>Project Goals</h2>
                 <ul>
                     <li>
-                        <p>Replicate the brachiation patterns exhibited by arboreal primates</p>
+                        <p>Replicate the arboreal locomotion of gibbons</p>
                     </li>
                     <li>
-                        <p>Develop familiarity with physics-based procedural animation</p>
+                        <p>Develop familiarity with procedural animation</p>
                     </li>
                     <li>
-                        <p>Design a mouse-based player control system that captures the feeling of swinging</p>
+                        <p>Design a player control system that captures the feeling of swinging</p>
                     </li>
                 </ul>
             </div>
@@ -101,11 +101,11 @@
         <div class="projectContent">
             <div class="wrapper">
                 <h1>Mouse-based swinging mechanic</h1>
-                <p class="descriptor">WIP. Describe the swinging control system and its inspiration (a difficult game about climbing). Effectively, the player character is a body with two arm tethers that it can attach to designated handholds on the map and swing off of. Share the gif of the early player character being controlled by the two red squares, maybe?</p>
+                <p class="descriptor">Gibbons move between branches by swinging their body like a pendulum, relying on momentum to pivot freely to the next branch. To replicate this system of movement, I designed a player character consisting of a "body" attached to two ropelike arms. The arms possess a degree of elasticity, letting the player sling themselves between handholds by pulling themselves in the direction of where an arm has most recently been anchored.</p>
                 <video loop muted autoplay id="videoIntro">
                     <source src="../videos/portfolio_brachiator_1.mp4" type="video/mp4">
                 </video>
-                <p class="descriptor">WIP. Describe the things the player can do with the control system and how it interacts with the map</p>
+                <p class="descriptor">Left/right clicking while hovering over an object anchors the corresponding hand to that object. When the player is anchored to a handhold, sweeping the mouse back and forth will apply directional force to their body. This effectively turns the player's body into a pendulum suspended by their arm(s), letting them swing within range of handholds that were previously out of reach.</p>
                 <video loop muted autoplay id="videoIntro">
                     <source src="../videos/portfolio_brachiator_2.mp4" type="video/mp4">
                 </video>
@@ -114,7 +114,7 @@
         <div class="projectContent">
             <div class="wrapper">
                 <h1>Procedural animation and physics</h1>
-                <p class="descriptor">WIP. Describe the player model's IK handle arms and ragdoll body. Effectively, the player model is a collection of joints that flop around in the air with two IK handle arms that are always attempting to follow where the mouse is pointing to on the world</p>
+                <p class="descriptor">The player is procedurally animated using a combination of hinge joints and IK handles. Each part of the body is influenced by the player's momentum as they swing between handholds, providing a natural quality to their movements. Beneath the skeleton, the player consists of a rigidbody capsule attached to a pair of cubes.</p>
                 <video loop muted autoplay id="videoIntro">
                     <source src="../videos/portfolio_brachiator_3.mp4" type="video/mp4">
                 </video>
@@ -123,7 +123,7 @@
         <div class="projectContent">
             <div class="wrapper">
                 <h1>GPU leaf instancing system</h1>
-                <p class="descriptor">WIP. Describe the tool I made to instantiate layered leaves for the game's foliage. Look at my pretty leaves! I spent two weeks learning how to do this and it looks awesome. I'm very proud about it.</p>
+                <p class="descriptor">To create foliage without impacting the game's performance by introducing thousands of unnecessary leaf objects, I developed a tool for drawing a matrix of leaf-shaped meshes on the surface of an object using a single render call. The rotation, animation loop, and color value of each leaf is determined inside of its material depending on where it was generated.</p>
                 <video loop muted autoplay id="videoIntro">
                     <source src="../videos/portfolio_brachiator_4.mp4" type="video/mp4">
                 </video>
