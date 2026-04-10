@@ -36,6 +36,15 @@ ul{
   display: flex;
   justify-content: flex-end;
 }
+.headerSmall {
+  display: flex;
+  align-items: center;
+}
+.headerSmall img {
+  position: absolute;
+  left: 1em;
+  opacity: 0;
+}
 .projectContent ul{
   display: block;
   list-style: disc;
@@ -522,6 +531,9 @@ div.collaborationList{
     height: 100%;
     text-align: center;
   }
+  .headerSmall img {
+    opacity: 100;
+  }
   h1.displayNameSmaller{
     font-size: 0px;
     width: 0%;
@@ -536,6 +548,19 @@ div.collaborationList{
     line-height: 0em;
     text-align: left;
     flex: 0;
+  }
+  li.displayLogo{
+    display: inline;
+    font-size: 0px;
+    padding: 0px;
+    width: 0%;
+    line-height: 0em;
+    text-align: left;
+    flex: 0;
+    opacity: 0;
+  }
+  li.displayLogoSmall{
+    display: flex;
   }
   .navOption, .navOption a{
     flex-grow: 0.25;
@@ -623,7 +648,8 @@ div.collaborationList{
     transition: all 0.25s ease;
     border-radius: 10px;
     border: 1px solid rgb(91, 91, 95, 0);
-    padding:0.2em;
+    padding:0.015em;
+    font-size: 0.93em;
   }
   div.video{
     width: 100%;
